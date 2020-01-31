@@ -6,8 +6,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
-import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
 import org.bson.Document;
 
 import com.rivaldy.shki.domain.Lookup;
@@ -22,11 +20,6 @@ public class LookupBO {
 	public static synchronized LookupBO getInstance() {
 		if(instance==null) instance = new LookupBO();
 		return instance;
-	}
-	
-	@Override
-	public String toString() {
-		return ReflectionToStringBuilder.toString(this, ToStringStyle.SHORT_PREFIX_STYLE);
 	}
 	
 	public boolean checkRequest(Document request) {

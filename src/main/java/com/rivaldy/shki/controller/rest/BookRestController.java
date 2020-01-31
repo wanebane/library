@@ -2,7 +2,6 @@ package com.rivaldy.shki.controller.rest;
 
 import javax.validation.Valid;
 
-import org.apache.log4j.Logger;
 import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -22,8 +21,6 @@ public class BookRestController {
 	
 	@Autowired
 	BookSvc bookSvc;
-	
-	public static Logger log = Logger.getLogger(BookRestController.class);
 	
 	@GetMapping({"","/"})
 	public ResponseEntity<?> getAll(){

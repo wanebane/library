@@ -3,11 +3,8 @@ package com.rivaldy.shki;
 import java.security.SecureRandom;
 import java.text.Normalizer;
 import java.text.Normalizer.Form;
-import java.util.Base64;
 import java.util.Locale;
 import java.util.regex.Pattern;
-
-import org.springframework.http.HttpStatus;
 
 public class ApplicationMain {
 	

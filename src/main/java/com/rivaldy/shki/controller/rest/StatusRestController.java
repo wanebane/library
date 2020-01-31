@@ -2,7 +2,6 @@ package com.rivaldy.shki.controller.rest;
 
 import javax.validation.Valid;
 
-import org.apache.log4j.Logger;
 import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -25,8 +24,6 @@ public class StatusRestController {
 
 	@Autowired
 	StatusSvc statusSvc;
-	
-	public static Logger log = Logger.getLogger(StatusRestController.class);
 	
 	@PostMapping
 	public ResponseEntity<?> add(@Valid @RequestBody Document request) {

@@ -12,8 +12,6 @@ import javax.persistence.TemporalType;
 import javax.persistence.Version;
 import javax.validation.constraints.NotNull;
 
-import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -62,12 +60,11 @@ public class Status {
 	@Column(name="updated_date", nullable=false)
 	private Date updatedDate;	
 	
-	/*Methods*/
 	@Override
 	public String toString() {
-		return ReflectionToStringBuilder.toString(this, ToStringStyle.SHORT_PREFIX_STYLE);
+		return "Status [id=" + id + ", code=" + code + ", name=" + name + ", description=" + description + ", type="
+				+ type + ", createdDate=" + createdDate + ", version=" + version + ", updatedDate=" + updatedDate + "]";
 	}
-	
 	/*Getter & Setter*/
 	public String getId() {
 		return id;
